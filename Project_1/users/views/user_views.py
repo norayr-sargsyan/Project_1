@@ -5,12 +5,12 @@ from users.user_serializers import UserSerializers
 
 
 class UserListCreateView(generics.ListCreateAPIView):
-    model = User
+    queryset = User.objects.all()
     serializer_class = UserSerializers
 
 
 class UserRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    model = User
+    queryset = User.objects.all()
     serializer_class = UserSerializers
 
 
